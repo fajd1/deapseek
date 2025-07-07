@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DeapSeek - Coming Soon</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DeapSeek → AnyTool.Pro</title>
   <style>
     body {
       margin: 0;
@@ -16,6 +16,7 @@
       flex-direction: column;
       height: 100vh;
       text-align: center;
+      padding: 1rem;
     }
 
     h1 {
@@ -24,8 +25,14 @@
     }
 
     p {
-      font-size: 1.25rem;
+      font-size: 1.2rem;
       color: #cccccc;
+      max-width: 600px;
+    }
+
+    .highlight {
+      color: #00ffaa;
+      font-weight: bold;
     }
 
     footer {
@@ -34,16 +41,45 @@
       font-size: 0.8rem;
       color: #666;
     }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 1rem;
+      color: #ffffffaa;
+    }
   </style>
+  <script>
+    let countdown = 3;
+    const interval = setInterval(() => {
+      countdown--;
+      const timer = document.getElementById('redirect-msg');
+      if (timer && countdown >= 0) {
+        timer.textContent = `Redirecting to AnyTool.Pro in ${countdown} second${countdown !== 1 ? 's' : ''}...`;
+      }
+      if (countdown <= 0) {
+        clearInterval(interval);
+        window.location.href = "https://anytool.pro/";
+      }
+    }, 1000);
+  </script>
 </head>
 <body>
 
-  <h1>Welcome to DeapSeek</h1>
-  <p>We're working on something amazing. Stay tuned!</p>
+  <div class="logo">🔧 DeapSeek</div>
 
-  <footer>&copy; 2025 DeapSeek.com</footer>
+  <h1>We’ve Evolved!</h1>
+  <p>
+    DeapSeek is now part of the <span class="highlight">AnyTool.Pro</span> experience — a powerful collection of productivity, dev, and conversion tools.
+  </p>
+  <p>
+    You're being redirected to our new home where the tools are sharper, faster, and easier to use.
+  </p>
+  <p id="redirect-msg">Redirecting to AnyTool.Pro in 3 seconds...</p>
 
-  <!-- Default Statcounter code for DeapSeek -->
+  <footer>&copy; 2025 DeapSeek.com / Powered by AnyTool.Pro</footer>
+
+  <!-- Statcounter code -->
   <script type="text/javascript">
     var sc_project = 13076881; 
     var sc_invisible = 1; 
