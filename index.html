@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>DeapSeek → AnyTool.Pro</title>
+  <title>Oops! DeapSeek → AnyTool.Pro</title>
   <style>
     body {
       margin: 0;
@@ -49,35 +49,6 @@
       color: #ffffffaa;
     }
   </style>
-  <script>
-    let countdown = 3;
-    const interval = setInterval(() => {
-      countdown--;
-      const timer = document.getElementById('redirect-msg');
-      if (timer && countdown >= 0) {
-        timer.textContent = `Redirecting to AnyTool.Pro in ${countdown} second${countdown !== 1 ? 's' : ''}...`;
-      }
-      if (countdown <= 0) {
-        clearInterval(interval);
-        window.location.href = "https://anytool.pro/";
-      }
-    }, 1000);
-  </script>
-</head>
-<body>
-
-  <div class="logo">🔧 DeapSeek</div>
-
-  <h1>We’ve Evolved!</h1>
-  <p>
-    DeapSeek is now part of the <span class="highlight">AnyTool.Pro</span> experience — a powerful collection of productivity, dev, and conversion tools.
-  </p>
-  <p>
-    You're being redirected to our new home where the tools are sharper, faster, and easier to use.
-  </p>
-  <p id="redirect-msg">Redirecting to AnyTool.Pro in 3 seconds...</p>
-
-  <footer>&copy; 2025 DeapSeek.com / Powered by AnyTool.Pro</footer>
 
   <!-- Statcounter code -->
   <script type="text/javascript">
@@ -98,6 +69,37 @@
     </div>
   </noscript>
   <!-- End of Statcounter Code -->
+
+  <!-- Redirect script -->
+  <script>
+    let countdown = 3;
+    const interval = setInterval(() => {
+      countdown--;
+      const timer = document.getElementById('redirect-msg');
+      if (timer && countdown >= 0) {
+        timer.textContent = `Redirecting to AnyTool.Pro in ${countdown} second${countdown !== 1 ? 's' : ''}...`;
+      }
+      if (countdown <= 0) {
+        clearInterval(interval);
+        window.location.href = "https://anytool.pro/";
+      }
+    }, 1000);
+  </script>
+</head>
+<body>
+
+  <div class="logo">🔧 DeapSeek (sort of)</div>
+
+  <h1>Looking for DeepSeek?</h1>
+  <p>
+    Close, but not quite — you’ve just landed on <span class="highlight>DeapSeek</span>, a happy little typo with a happy little purpose.
+  </p>
+  <p>
+    While you're here, why not explore <span class="highlight">AnyTool.Pro</span> — our all-in-one toolbox packed with smart tools for devs, creators, and curious minds. It's like a Swiss army knife, but digital and less likely to poke you.
+  </p>
+  <p id="redirect-msg">Redirecting to AnyTool.Pro in 3 seconds...</p>
+
+  <footer>&copy; 2025 DeapSeek.com — Redirecting proudly to AnyTool.Pro</footer>
 
 </body>
 </html>
