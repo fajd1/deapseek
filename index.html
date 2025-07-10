@@ -3,103 +3,105 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Oops! DeapSeek → AnyTool.Pro</title>
+  <title>Redirect — DeapSeek.com</title>
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0d0d0d;
-      color: #ffffff;
+      padding: 0;
+      background-color: #f4f6f8;
+      color: #333;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-direction: column;
       height: 100vh;
       text-align: center;
-      padding: 1rem;
+    }
+
+    .container {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 2.5rem 3rem;
+      max-width: 500px;
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.05);
     }
 
     h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #111;
     }
 
     p {
-      font-size: 1.2rem;
-      color: #cccccc;
-      max-width: 600px;
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
     }
 
-    .highlight {
-      color: #00ffaa;
-      font-weight: bold;
+    .button {
+      background-color: #0073e6;
+      color: #fff;
+      padding: 0.9rem 2rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
-    footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.8rem;
-      color: #666;
+    .button:hover {
+      background-color: #005bb5;
     }
 
-    .logo {
-      font-size: 1.5rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-      color: #ffffffaa;
+    .footer {
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: #aaa;
+    }
+
+    a.hidden-link {
+      display: none;
     }
   </style>
-
-  <!-- Statcounter code -->
-  <script type="text/javascript">
-    var sc_project = 13076881; 
-    var sc_invisible = 1; 
-    var sc_security = "30906d40"; 
-  </script>
-  <script type="text/javascript"
-    src="https://www.statcounter.com/counter/counter.js"
-    async></script>
-  <noscript>
-    <div class="statcounter">
-      <a title="Web Analytics Made Easy - Statcounter" href="https://statcounter.com/" target="_blank">
-        <img class="statcounter" src="https://c.statcounter.com/13076881/0/30906d40/1/" 
-        alt="Web Analytics Made Easy - Statcounter" 
-        referrerPolicy="no-referrer-when-downgrade">
-      </a>
-    </div>
-  </noscript>
-  <!-- End of Statcounter Code -->
-
-  <!-- Redirect script -->
-  <script>
-    let countdown = 3;
-    const interval = setInterval(() => {
-      countdown--;
-      const timer = document.getElementById('redirect-msg');
-      if (timer && countdown >= 0) {
-        timer.textContent = `Redirecting to AnyTool.Pro in ${countdown} second${countdown !== 1 ? 's' : ''}...`;
-      }
-      if (countdown <= 0) {
-        clearInterval(interval);
-        window.location.href = "https://anytool.pro/";
-      }
-    }, 1000);
-  </script>
 </head>
 <body>
+  <div class="container">
+    <h1>You're Almost There!</h1>
+    <p>
+      Welcome! While you're headed to <strong>DeepSeek</strong>, take a moment to discover <strong>AnyTool.Pro</strong>:
+      your all-in-one digital Swiss army knife. From PDF manipulation to developer utilities and creative boosters,
+      AnyTool.Pro packs smart, reliable tools designed to save you time and power your projects with ease.
+      Whether you're a coder, creator, or just curious, it’s your new go-to toolbox online.
+    </p>
+    <p>
+      Click the button below to proceed to <strong>DeepSeek</strong>.<br />
+      We'll also open <strong>AnyTool.Pro</strong> in a new tab.
+    </p>
+    <button class="button" onclick="redirectToBoth()">Go to DeepSeek</button>
+    <div class="footer">&copy; 2025 DeapSeek.com — Smart redirection in style</div>
+  </div>
 
-  <div class="logo">🔧 DeapSeek (sort of)</div>
+  <!-- Hidden links for dual navigation -->
+  <a id="linkAnytool" class="hidden-link" href="https://anytool.pro" >AnyTool</a>
+  <a id="linkDeepseek" class="hidden-link" href="https://deepseek.com" target="_blank" rel="noopener noreferrer">DeepSeek</a>
 
-  <h1>Looking for DeepSeek?</h1>
-  <p>
-    Close, but not quite — you’ve just landed on <span class="highlight>DeapSeek</span>, a happy little typo with a happy little purpose.
-  </p>
-  <p>
-    While you're here, why not explore <span class="highlight">AnyTool.Pro</span> — our all-in-one toolbox packed with smart tools for devs, creators, and curious minds. It's like a Swiss army knife, but digital and less likely to poke you.
-  </p>
-  <p id="redirect-msg">Redirecting to AnyTool.Pro in 3 seconds...</p>
+  <script>
+    function redirectToBoth() {
+      // Redirect current tab to DeepSeek
+      document.getElementById("linkDeepseek").click();
+         // Open AnyTool.Pro in new tab
+      document.getElementById("linkAnytool").click();
+    }
+  </script>
 
-  <footer>&copy; 2025 DeapSeek.com — Redirecting proudly to AnyTool.Pro</footer>
-
+  <!-- Statcounter Code -->
+  <script type="text/javascript">
+    var sc_project = 13076881;
+    var sc_invisible = 1;
+    var sc_security = "30906d40";
+  </script>
+  <script type="text/javascript" src="https://www.statcounter.com/counter/counter.js" async></script>
 </body>
 </html>
